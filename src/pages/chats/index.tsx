@@ -7,10 +7,20 @@ import { BiHash } from "react-icons/bi";
 
 import dynamic from "next/dynamic";
 import { useUser } from "contexts";
+import { Loader } from "components";
 
-const Sidebar = dynamic(() => import("collections").then((el) => el.Sidebar));
-const Button = dynamic(() => import("components").then((el) => el.Button));
-const _Dashboard = dynamic(() => import("sections").then((el) => el.Dashboard));
+const Sidebar = dynamic(() => import("collections").then((el) => el.Sidebar), {
+  loading: () => <Loader />,
+});
+const Button = dynamic(() => import("components").then((el) => el.Button), {
+  loading: () => <Loader />,
+});
+const _Dashboard = dynamic(
+  () => import("sections").then((el) => el.Dashboard),
+  {
+    loading: () => <Loader />,
+  }
+);
 
 export default function Dashboard({ ...props }) {
   const router = useRouter();

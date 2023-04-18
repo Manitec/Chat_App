@@ -7,14 +7,29 @@ import { RxCross1 } from "react-icons/rx";
 import { firebaseApi } from "services";
 import dynamic from "next/dynamic";
 import { useUser } from "contexts";
+import { Loader } from "components";
 
-const Sidebar = dynamic(() => import("collections").then((el) => el.Sidebar));
-const RoomMembers = dynamic(() =>
-  import("collections").then((el) => el.RoomMembers)
+const Sidebar = dynamic(() => import("collections").then((el) => el.Sidebar), {
+  loading: () => <Loader />,
+});
+const RoomMembers = dynamic(
+  () => import("collections").then((el) => el.RoomMembers),
+  {
+    loading: () => <Loader />,
+  }
 );
-const Button = dynamic(() => import("components").then((el) => el.Button));
-const _Dashboard = dynamic(() => import("sections").then((el) => el.Dashboard));
-const Messages = dynamic(() => import("sections").then((el) => el.Messages));
+const Button = dynamic(() => import("components").then((el) => el.Button), {
+  loading: () => <Loader />,
+});
+const _Dashboard = dynamic(
+  () => import("sections").then((el) => el.Dashboard),
+  {
+    loading: () => <Loader />,
+  }
+);
+const Messages = dynamic(() => import("sections").then((el) => el.Messages), {
+  loading: () => <Loader />,
+});
 
 export default function ChatRoom() {
   const [sidebarOpened, setSidebarOpened] = useState<boolean>(false);
