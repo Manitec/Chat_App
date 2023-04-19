@@ -1,5 +1,5 @@
 import { GoogleBtn, Loader, TPopups } from "components";
-import { FaDiscord } from "react-icons/fa";
+import { FaDiscourse } from "react-icons/fa";
 import { useRouter } from "next/router";
 import React, { RefObject, useState } from "react";
 import { firebaseApi, FirebaseErrors } from "services/firebase";
@@ -61,7 +61,7 @@ export const LoginPopup: React.FC<LoginProps> = ({ closePopup, ...props }) => {
   return (
     <form onSubmit={handleLoginSubmit} className="form">
       <div className="form-demo-info">
-        <FaDiscord size={50} className="hidden md:block md:mb-[20px]" />
+        <FaDiscourse size={50} className="hidden md:block md:mb-[20px]" />
         <h1 className="text-[18px] mb-1 md:mb-6">Demo Account</h1>
         <span className="md:mb-1">email: user@gmail.com</span>
         <span>password: 123123</span>

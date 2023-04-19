@@ -12,7 +12,7 @@ import {
   FaPhp,
   FaReact,
   FaAngular,
-  FaDiscord,
+  FaDiscourse,
   FaLanguage,
 } from "react-icons/fa";
 import { SiBurton } from "react-icons/si";
@@ -99,7 +99,7 @@ export const CreateRoomForm: React.FC<CreateRoomFormProps> = ({ ...props }) => {
       onSubmit={(e) => handleCreateRoomSubmit(e)}
     >
       <div className="form-demo-info">
-        <FaDiscord size={50} className="hidden md:block md:mb-[20px]" />
+        <FaDiscourse size={50} className="hidden md:block md:mb-[20px]" />
         <h1 className="text-[18px] mb-1 md:mb-6 text-center">
           Create your own room!
         </h1>

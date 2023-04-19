@@ -3,7 +3,7 @@ import { useRouter } from "next/router";
 import React, { RefObject, useState } from "react";
 import { firebaseApi, FirebaseErrors } from "services/firebase";
 import { transformErrorMessage } from "utils";
-import { FaDiscord } from "react-icons/fa";
+import { FaDiscourse } from "react-icons/fa";
 
 interface SignUpProps {
   closePopup: (type?: TPopups) => () => void;
@@ -60,7 +60,7 @@ export const SignUpPopup: React.FC<SignUpProps> = ({
   return (
     <form onSubmit={(e) => handleSignUp(e)} className="form">
       <div className="form-demo-info">
-        <FaDiscord size={50} className="hidden md:block md:mb-[20px]" />
+        <FaDiscourse size={50} className="hidden md:block md:mb-[20px]" />
         <h1 className="text-[18px] mb-1 md:mb-6">Hint!</h1>
         <span className="md:mb-1 text-center">
           Get your demo account, when you try to Login.
