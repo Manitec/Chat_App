@@ -9,7 +9,7 @@ export default function App({ Component, pageProps }: AppProps) {
   return (
     <>
       <Head key={"head"}>
-        <title>Discord Clone</title>
+        <title>Banjoshire</title>
       </Head>
       <main>
         <Provider store={store}>

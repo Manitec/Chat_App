@@ -43,7 +43,7 @@ const UserInfo: React.FC<UserInfoProps> = ({ closePopup, userInfo }) => {
             {userInfo.name} #{userInfo.uid.slice(0, 4)}
           </div>
           <div className="text-white py-[10px] text-[15px] border-b-[1px] border-slate-400">
-            <div className="pb-[5px]">Discord Member since</div>
+            <div className="pb-[5px]">Banjoshire Member since</div>
             <div className="opacity-[0.7]">
               {userInfo.memberSince.slice(0, -13)}
             </div>

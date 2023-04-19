@@ -67,7 +67,7 @@ export const LoginPopup: React.FC<LoginProps> = ({ closePopup, ...props }) => {
         <span>password: 123123</span>
       </div>
       <div className="flex flex-col">
-        <h1 className="form-banner-h">Welcome back to Discord!</h1>
+        <h1 className="form-banner-h">Welcome back to Banjoshire!</h1>
         <span className="form-banner-span">
           Continiue with Google or enter your details.
         </span>
@@ -109,7 +109,7 @@ export const LoginPopup: React.FC<LoginProps> = ({ closePopup, ...props }) => {
             type="submit"
             className="p-2 py-[15px] border-2 rounded-[10px] bg-black/90 text-white mt-[20px]"
           >
-            Login To Discord
+            Login To Banjoshire
           </button>
         )}
       </div>
