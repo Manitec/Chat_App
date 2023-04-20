@@ -18,6 +18,7 @@ import medusa from "../../public/svgs/avatar-medusa.svg";
 import overlord from "../../public/svgs/avatar-overlord.svg";
 import badger from "../../public/svgs/avatar-badger.svg";
 import doctor from "../../public/svgs/avatar-doctor.svg";
+import mani from "../../public/svgs/avatar-mani.svg";
 import horse from "../../public/svgs/avatar-horse.svg";
 import octopus from "../../public/svgs/avatar-octopus.svg";
 import tears from "../../public/svgs/avatar-tears.svg";
@@ -59,6 +60,7 @@ export {
   overlord,
   badger,
   doctor,
+  mani,
   horse,
   octopus,
   tears,
