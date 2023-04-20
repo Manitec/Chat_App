@@ -8,11 +8,6 @@ interface NavigationProps {
 }
 export const Navigation: React.FC<NavigationProps> = ({ ...props }) => {
   const dispatch = useAppDispatch();
-      <Logo />
-      <Popup
-        closePopup={() => togglePopup("null")}
-        popupType={popupOpened || "null"}
-      />
-    </nav>
+     </nav>
   );
 };
