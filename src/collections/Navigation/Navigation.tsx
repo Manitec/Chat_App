@@ -9,7 +9,6 @@ interface NavigationProps {
 
 export const Navigation: React.FC<NavigationProps> = ({ ...props }) => {
   const dispatch = useAppDispatch();
-  const { popupOpened } = useAppSelector((state) => state.counter);
   return (
     <nav className="navigation-landing" {...props}>
       <Logo />
