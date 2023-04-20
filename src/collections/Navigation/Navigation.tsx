@@ -12,13 +12,6 @@ export const Navigation: React.FC<NavigationProps> = ({ ...props }) => {
   return (
     <nav className="navigation-landing" {...props}>
       <Logo />
-      <Popup
-        closePopup={() => togglePopup("null")}
-        popupType={popupOpened || "null"}
-      />
-      <div onClick={() => dispatch(togglePopup("login"))}>
-        <Button text="Open Banjoshire" />
-      </div>
     </nav>
   );
 };
