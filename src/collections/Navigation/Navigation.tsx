@@ -17,7 +17,7 @@ export const Navigation: React.FC<NavigationProps> = ({ ...props }) => {
         closePopup={() => togglePopup("null")}
         popupType={popupOpened || "null"}
       />
-      <div onClick={() => dispatch(togglePopup("login"))}>
+      <div onClick={() => dispatch(togglePopup("Empty"))}>
         <Button text="Open Banjoshire" />
       </div>
     </nav>
