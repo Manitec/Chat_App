@@ -13,7 +13,7 @@ interface DashboardProps {
   ref?: RefObject<HTMLDivElement>;
 }
 
-export const Dashboard: React.FC<DashboardProps> = ({ ...props }) => {
+export const DashboardEl: React.FC<DashboardProps> = ({ ...props }) => {
   const [rooms, setRooms] = useState<IRoom[]>([]);
 
   const router = useRouter();
@@ -46,6 +46,7 @@ export const Dashboard: React.FC<DashboardProps> = ({ ...props }) => {
           />
         </div>
       )}
+
       <section className="dashboard" {...props}>
         <div className="w-full h-[40vw] top-0 max-h-[400px] flex items-center justify-center flex-col">
           <h1 className="dashboard-greeting z-[10]">Explore Rooms</h1>
@@ -96,11 +97,12 @@ export const Dashboard: React.FC<DashboardProps> = ({ ...props }) => {
           <div className="dashboard-rooms-container">
             {rooms.map((room, i) => {
               const Icon = icons[room.icon];
+              if (room.icon === undefined) return null;
               const userHasJoined = hasUserJoined(room, user?.uid || "!user!");
               return (
                 <div
                   key={i}
-                  className="dashboard-room "
+                  className="dashboard-room"
                   onClick={handleGoToRoom(room.name, userHasJoined)}
                 >
                   <Icon size={20} />
@@ -110,7 +112,6 @@ export const Dashboard: React.FC<DashboardProps> = ({ ...props }) => {
             })}
           </div>
         </div>
-        {/* <div className="dashboard-or-marker" /> */}
       </section>
     </>
   );
