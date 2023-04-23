@@ -22,7 +22,7 @@ const Button = dynamic(() => import("components").then((el) => el.Button), {
   loading: () => <Loader />,
 });
 const _Dashboard = dynamic(
-  () => import("sections").then((el) => el.Dashboard),
+  () => import("sections").then((el) => el.DashboardEl),
   {
     loading: () => <Loader />,
   }
