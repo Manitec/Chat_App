@@ -9,9 +9,9 @@ const FadeAnimation: React.FC<FadeAnimationProps> = ({ children }) => {
     <FadeIn
       from="top"
       positionOffset={200}
-      triggerOffset={-200}
-      delayInMilliseconds={400}
-      durationInMilliseconds={400}
+      triggerOffset={-100}
+      delayInMilliseconds={300}
+      durationInMilliseconds={500}
     >
       {children}
     </FadeIn>

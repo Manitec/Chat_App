@@ -55,8 +55,8 @@ export const LandingPageHero: React.FC<LandingPageHeroProps> = ({
         from="top"
         positionOffset={0}
         triggerOffset={0}
-        delayInMilliseconds={400}
-        durationInMilliseconds={400}
+        delayInMilliseconds={300}
+        durationInMilliseconds={300}
       >
         <Navigation />
       </FadeIn>
@@ -64,8 +64,8 @@ export const LandingPageHero: React.FC<LandingPageHeroProps> = ({
         from="top"
         positionOffset={0}
         triggerOffset={0}
-        delayInMilliseconds={400}
-        durationInMilliseconds={400}
+        delayInMilliseconds={300}
+        durationInMilliseconds={300}
       >
         <div className="hero-container">
           <Popup
