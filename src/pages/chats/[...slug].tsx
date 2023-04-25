@@ -4,10 +4,11 @@ import { BiHash } from "react-icons/bi";
 import { BsFillPeopleFill } from "react-icons/bs";
 import { IoMenuSharp } from "react-icons/io5";
 import { RxCross1 } from "react-icons/rx";
-import { firebaseApi } from "services";
+import { firebaseApi, togglePopup } from "services";
 import dynamic from "next/dynamic";
 import { useUser } from "contexts";
-import { Loader } from "components";
+import { Loader, Popup } from "components";
+import { useAppDispatch, useAppSelector } from "hooks";
 
 const Sidebar = dynamic(() => import("collections").then((el) => el.Sidebar), {
   loading: () => <Loader />,
@@ -34,6 +35,9 @@ const Messages = dynamic(() => import("sections").then((el) => el.Messages), {
 export default function ChatRoom() {
   const [sidebarOpened, setSidebarOpened] = useState<boolean>(false);
   const [roomMembersOpened, setRoomMembersOpened] = useState<boolean>(false);
+
+  const dispatch = useAppDispatch();
+  const { popupOpened } = useAppSelector((state) => state.counter);
 
   const router = useRouter();
   const slug = router.query.slug ? router.query.slug[0] : "";
@@ -87,6 +91,10 @@ export default function ChatRoom() {
   return (
     <>
       <div className="flex h-[100vh] overflow-hidden">
+        <Popup
+          closePopup={() => dispatch(togglePopup("null"))}
+          popupType={popupOpened || "null"}
+        />
         <Sidebar
           sidebarOpened={sidebarOpened}
           setSidebarOpened={setSidebarOpened}

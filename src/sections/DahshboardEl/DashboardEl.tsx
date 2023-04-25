@@ -1,5 +1,4 @@
 import { icons } from "collections";
-import { Popup } from "components";
 import { useUser } from "contexts";
 import { useRouter } from "next/router";
 import React, { RefObject, useEffect, useState } from "react";
@@ -19,7 +18,6 @@ export const DashboardEl: React.FC<DashboardProps> = ({ ...props }) => {
   const router = useRouter();
   const { user } = useUser();
   const dispatch = useAppDispatch();
-  const { popupOpened } = useAppSelector((state) => state.counter);
 
   useEffect(() => {
     firebaseApi.GET.allRooms(setRooms);
@@ -38,15 +36,6 @@ export const DashboardEl: React.FC<DashboardProps> = ({ ...props }) => {
 
   return (
     <>
-      {popupOpened && (
-        <div className="fixed z-[90] left-0 w-full">
-          <Popup
-            closePopup={() => dispatch(togglePopup("null"))}
-            popupType={popupOpened || "null"}
-          />
-        </div>
-      )}
-
       <section className="dashboard" {...props}>
         <div className="w-full h-[40vw] top-0 max-h-[400px] flex items-center justify-center flex-col">
           <h1 className="dashboard-greeting z-[10]">Explore Rooms</h1>
