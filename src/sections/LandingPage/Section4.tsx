@@ -1,7 +1,7 @@
 import { section4, stars } from "assets";
-import { Button, Popup, TPopups } from "components";
+import { Button } from "components";
 import FadeAnimation from "components/FadeAnimation/FadeAnimation";
-import { useAppDispatch, useAppSelector } from "hooks";
+import { useAppDispatch } from "hooks";
 import Image from "next/image";
 import { RefObject } from "react";
 import { togglePopup } from "services";
@@ -12,7 +12,6 @@ interface section4Props {
 
 export const Section4: React.FC<section4Props> = ({ ...props }) => {
   const dispatch = useAppDispatch();
-  const { popupOpened } = useAppSelector((state) => state.counter);
 
   return (
     <>
@@ -39,11 +38,6 @@ export const Section4: React.FC<section4Props> = ({ ...props }) => {
           </div>
         </FadeAnimation>
       </section>
-      <Popup
-        closePopup={() => dispatch(togglePopup("null"))}
-        popupType={popupOpened || "null"}
-      />
-
       <section className="bg-white">
         <FadeAnimation>
           <div className="rdy-to-start">

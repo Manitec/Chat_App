@@ -13,6 +13,7 @@ export const transformErrorMessage = (msg: string) => {
 };
 
 export const hasUserJoined = (room: IRoom, userId: string) => {
+  if (!room.members) return false;
   const userHasJoined = Object.values(room.members)
     .map((el) => el.user)
     .indexOf(userId || "!not joined!");

@@ -7,7 +7,6 @@ import {
 } from "collections";
 import { Loader } from "components/Loader";
 import { MessageOptions } from "components/MessageOptions";
-import { Popup } from "components/Popup";
 import { Emoji, EmojiStyle } from "emoji-picker-react";
 import { useUser } from "contexts";
 import Image from "next/image";
@@ -77,12 +76,6 @@ export const Message: React.FC<MessageProps> = ({ message, ...props }) => {
       {...props}
       className={edit || emojiPicker ? "message-hovered" : "message"}
     >
-      {togglePopup && (
-        <Popup
-          closePopup={() => dispatch(togglePopup("null"))}
-          popupType={popupOpened || "null"}
-        />
-      )}
       {emojiPicker && (
         <>
           <div

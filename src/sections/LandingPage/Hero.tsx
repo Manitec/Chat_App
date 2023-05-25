@@ -17,14 +17,10 @@ export const LandingPageHero: React.FC<LandingPageHeroProps> = ({
   ...props
 }) => {
   const dispatch = useAppDispatch();
-  const { popupOpened, userInfo } = useAppSelector((state) => state.counter);
+  const { popupOpened } = useAppSelector((state) => state.counter);
 
   return (
     <section className="w-full bg-heroBackground overflow-hidden" {...props}>
-      <Popup
-        closePopup={() => dispatch(togglePopup("null"))}
-        popupType={popupOpened || "null"}
-      />
       <Image
         src={clouds}
         alt={"cloudsImg"}
@@ -59,8 +55,8 @@ export const LandingPageHero: React.FC<LandingPageHeroProps> = ({
         from="top"
         positionOffset={0}
         triggerOffset={0}
-        delayInMilliseconds={400}
-        durationInMilliseconds={400}
+        delayInMilliseconds={300}
+        durationInMilliseconds={300}
       >
         <Navigation />
       </FadeIn>
@@ -68,10 +64,14 @@ export const LandingPageHero: React.FC<LandingPageHeroProps> = ({
         from="top"
         positionOffset={0}
         triggerOffset={0}
-        delayInMilliseconds={400}
-        durationInMilliseconds={400}
+        delayInMilliseconds={300}
+        durationInMilliseconds={300}
       >
         <div className="hero-container">
+          <Popup
+            closePopup={() => dispatch(togglePopup("null"))}
+            popupType={popupOpened || "null"}
+          />
           <h1 className="hero-banner-text">IMAGINE A PLACE...</h1>
           <p className="hero-p">
             ...where you can belong to a school club, a gaming group, or a

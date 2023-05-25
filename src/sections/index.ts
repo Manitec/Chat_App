@@ -1,3 +1,3 @@
 export * from "./LandingPage";
-export * from "./Dahshboard";
+export * from "./DahshboardEl";
 export * from "./Messages";

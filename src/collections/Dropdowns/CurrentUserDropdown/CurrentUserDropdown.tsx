@@ -1,5 +1,5 @@
 import { avatars, banners } from "collections/Forms";
-import { CurrentStatus, Loader, Popup } from "components";
+import { CurrentStatus, Loader } from "components";
 import { useAppDispatch, useAppSelector } from "hooks";
 import Image from "next/image";
 import React, { RefObject } from "react";
@@ -19,14 +19,9 @@ export const CurrentUserDropdown: React.FC<CurrentUserDropdownProps> = ({
   ...props
 }) => {
   const dispatch = useAppDispatch();
-  const { popupOpened } = useAppSelector((state) => state.counter);
 
   return userInfo ? (
     <>
-      <Popup
-        closePopup={() => dispatch(togglePopup("null"))}
-        popupType={popupOpened || "null"}
-      />
       <div
         className={
           opened
