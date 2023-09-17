@@ -1,6 +1,6 @@
-# Discord App Clone
+# Banjoshire
 
-## Live Preview at https://chat-app-nikolaicholakov25.vercel.app/
+## Live Preview at https://banjoshire.vercel.app/
 
 ## Demo Account
 
@@ -31,6 +31,6 @@ The project was built using
 
 ## How to use
 
-- Go to https://chat-app-nikolaicholakov25.vercel.app/
+- Go to https://banjoshire.vercel.app/
 - Make an Account, login with google or use the demo account from above
 - Explore the chat rooms
