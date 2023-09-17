@@ -34,3 +34,5 @@ The project was built using
 - Go to https://banjoshire.vercel.app/
 - Make an Account, login with google or use the demo account from above
 - Explore the chat rooms
+
+- big thanks to nikolaicholakov25 who made the base code to this so i could be lazy lol.
